@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scorecard</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <h1>ScoreCard</h1>
+
+    <div>
+        <label for="innings" class="block text-sm font-medium text-gray-700">Choose innings</label>
+        <select id="innings" name="innings" class="w-full border border-gray-300 rounded px-3 py-2">
+            <option value="1">First</option>
+            <option value="2">Second</option>
+        </select>
+    </div>
+
+    <div> 
+        <h2 class="js-score"></h2>
+
+        <h3>Score Input</h3>   
+
+         <!--<div>
+            <label for="wickets" class="block text-sm font-medium text-gray-700">Wickets</label>
+            <input type="text" id="wickets" name="wickets" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter No. Of Wickets">
+        </div>-->
+
+        <!--<div>
+            <label for="oversbowled" class="block text-sm font-medium text-gray-700">Overs Bowled</label>
+            <input type="text" id="oversbowled" name="wickets" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter No. Of Overs Bowled">
+        </div>-->
+
+        <div class="bg-white rounded-lg shadow-lg p-5">
+            <div>
+                <button id="btn0Run" onclick = "updateScore(0);">0</button>
+                <button id="btn1Run" onclick = "updateScore(1);">1</button>
+                <button id="btn2Run" onclick = "updateScore(2);">2</button>
+                <button id="btn3Run" onclick = "updateScore(3);">3</button>
+                <button id="btn4Run" onclick = "updateScore(4);">4</button>
+                <button id="btn5Run" onclick = "updateScore(5);">5</button>
+                <button id="btn6Run" onclick = "updateScore(6);">6</button>
+                <button id="btn7Run" onclick = "updateScore(7);">7</button>
+            </div>
+            <div>
+                <button id="btnWicket" onclick = "updateScore('W');">Wicket</button>
+                <button id="btnWD" onclick = "updateScore(1);">WD</button>
+                <button id="btnNB" onclick = "updateScore(1);">NB</button>
+            </div>
+            <div>
+                <button id="rstScr" onclick = "resetScore()">Reset Score</button>
+                <button id="undoScr" onclick= "undoScore(score.lastResult)">Undo</button>
+            </div>
+        </div>    
+
+        <div>
+            <h4>Current Players</h4>
+
+            <div>
+                <label for="strike" class="block text-sm font-medium text-gray-700">Strike</label>
+                <input type="text" id="onstrike" name="onstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
+            </div>
+
+            <div>
+                <label for="nonstrike" class="block text-sm font-medium text-gray-700">Non Strike</label>
+                <input type="text" id="nonstrike" name="nonstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
+            </div>
+
+            <div>
+                <label for="currentbowler" class="block text-sm font-medium text-gray-700">Current Bowler</label>
+                <input type="text" id="currentbowler" name="currentbowler" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Bowler">
+            </div>
+
+            <div>
+                <button id="btnUpdateplayers">Update Players</button> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
