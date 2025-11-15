@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient( circle 600px at 47.1% 47.8%,  rgba(8,208,115,1) 0%, rgba(0,0,0,1) 91.3% );
+    min-height: 100vh;
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #323535;
+}
+
+.container{
+    opacity: 1;
+    width: 100%;
+    max-width: 1200px;
+    background-color:rgb(94, 146, 107);;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+    text-align: center;
+    color: #121313;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+h2{
+    color: #212424;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 550;
+    letter-spacing: -0.5px;
+}
+
+.match-info{
+    background: rgb(142, 185, 154);
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 24px;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 50px rgba(0.15, 0.15, 0.15, 0.15);
+}
+
+.match-info h3{
+    margin-bottom: 8px;
+    margin-top: 10px;
+    font-weight: 505;
+    letter-spacing: -0.5px;
+}
+
+.team-name{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 200px;
+}
+
+.team{
+    background: rgb(121, 185, 140);
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 100px;
+}
+
+.info-input-box{background-image: linear-gradient(to right, #e0fce1 0%, #bff8cb  51%, #e0fce1  100%)}
+.info-input-box{
+    border: none;
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0px 0px 20px rgba(0.2, 0.2, 0.2, 0.2);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.info-input-box:focus{
+    background-position: right center;
+    transition: 0.5s;
+}
+
+.over-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.over-elements{
+    background: rgb(121, 185, 140);
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 100px;
+}
+
+.over-input-box{background-image: linear-gradient(to right, #e0fce1 0%, #bff8cb  51%, #e0fce1  100%)}
+.over-input-box{
+    border: none;
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0px 0px 20px rgba(0.2, 0.2, 0.2, 0.2);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.over-input-box:focus{
+    background-position: right center;
+    transition: 0.5s;
+}
+
+.nextbutton-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #7fbe69 0%, #75e74c  51%, #7fbe69  100%)}
+.btn-grad {
+    color: #212424;
+    font-weight: 1000;
+    border: none;
+    margin: 10px;
+    padding: 15px 45px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;          
+    box-shadow: 0 0 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 50px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #212424;
+    text-decoration: none;
+}
+
+.btn-grad:active{
+    opacity: 0.75;
+    transition: 0.1s;
+    box-shadow: none;
+}
+
+
+/* page 2 css */
+
+.playernames{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #032215d2;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.placeholder-input::placeholder{
+    color: #13221c50;
+}
+
+
+
