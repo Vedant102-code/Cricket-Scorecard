@@ -161,3 +161,42 @@ h2{
     transition: 0.1s;
     box-shadow: none;
 }
+         
+/* page 2 css */
+
+.playernames{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #032215d2;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.placeholder-input::placeholder{
+    color: #13221c50;
+}
+         
+.batting-team-disp{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 200px;
+}
+
+.batting-team-box{
+    background: rgb(121, 185, 140);
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 100px;
+} 
+
+select{background-image: linear-gradient(to right, #e0fce1 0%, #bff8cb  51%, #e0fce1  100%)}
+select{
+    text-align: center;
+    width: 175px;
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+}
+
