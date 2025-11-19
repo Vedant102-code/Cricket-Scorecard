@@ -3,90 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tstyle.css">
+    <script src="tscript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Cricket Scorecard</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
 </head>
+
 <body>
-    <h1>ScoreCard</h1>
+    <div class="container">
+        <h1>SCORECARD</h1>
+        <div class="setup-container">
 
-    <div>
-        <label for="innings" class="block text-sm font-medium text-gray-700">Choose innings</label>
-        <select id="innings" name="innings" class="w-full border border-gray-300 rounded px-3 py-2">
-            <option value="1">First</option>
-            <option value="2">Second</option>
-        </select>
-    </div>
-
-    <div> 
-        <h2 class="js-score"></h2>
-
-        <h3>Score Input</h3>   
-
-         <!--<div>
-            <label for="wickets" class="block text-sm font-medium text-gray-700">Wickets</label>
-            <input type="text" id="wickets" name="wickets" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter No. Of Wickets">
-        </div>-->
-
-        <!--<div>
-            <label for="oversbowled" class="block text-sm font-medium text-gray-700">Overs Bowled</label>
-            <input type="text" id="oversbowled" name="wickets" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter No. Of Overs Bowled">
-        </div>-->
-
-        <div class="bg-white rounded-lg shadow-lg p-5">
-            <div>
-                <button id="btn0Run" onclick = "updateScore(0);">0</button>
-                <button id="btn1Run" onclick = "updateScore(1);">1</button>
-                <button id="btn2Run" onclick = "updateScore(2);">2</button>
-                <button id="btn3Run" onclick = "updateScore(3);">3</button>
-                <button id="btn4Run" onclick = "updateScore(4);">4</button>
-                <button id="btn5Run" onclick = "updateScore(5);">5</button>
-                <button id="btn6Run" onclick = "updateScore(6);">6</button>
-                <button id="btn7Run" onclick = "updateScore(7);">7</button>
+            <div class="match-info">
+                <h2 id="match-header"></h2>
+                <div class="main-score-box">
+                    <div class="main-score-disp">
+                        <h1 class="js-score">0/0<h3>(0.0)</h3></h1>
+                    </div>
+                </div>
+                <div class="active-players">
+                    <div class="active-batsmen">
+                        <h3>Batsmen Names go here</h3>
+                    </div>
+                    <div class="active-bowler">
+                        <h3>Bowler Name goes here</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="bg-white rounded-lg shadow-lg p-5">
+                    <div>
+                        <button class="btn-grad-p3" id="btn0Run" onclick = "updateScore(0);">0</button>
+                        <button class="btn-grad-p3" id="btn1Run" onclick = "updateScore(1);">1</button>
+                        <button class="btn-grad-p3" id="btn2Run" onclick = "updateScore(2);">2</button>
+                        <button class="btn-grad-p3" id="btn3Run" onclick = "updateScore(3);">3</button>
+                        <button class="btn-grad-p3" id="btn4Run" onclick = "updateScore(4);">4</button>
+                        <button class="btn-grad-p3" id="btn5Run" onclick = "updateScore(5);">5</button>
+                        <button class="btn-grad-p3" id="btn6Run" onclick = "updateScore(6);">6</button>
+                        <button class="btn-grad-p3" id="btn7Run" onclick = "updateScore(7);">7</button>
+                    </div>
+                    <div>
+                        <button class="btn-grad-p3" id="btnWicket" onclick = "updateScore('W');">Wicket</button>
+                        <button class="btn-grad-p3" id="btnWD" onclick = "updateScore('WD');">WD</button>
+                        <button class="btn-grad-p3" id="btnNB" onclick = "updateScore('NB');">NB</button>
+                    </div>
+                    <div>
+                        <button class="btn-grad-p3" id="rstScr" onclick = "resetScore()">Reset Score</button>
+                        <button class="btn-grad-p3" id="undoScr" onclick= "undoScore(score.lastResult)">Undo</button>
+                    </div>
+                </div> 
             </div>
-            <div>
-                <button id="btnWicket" onclick = "updateScore('W');">Wicket</button>
-                <button id="btnWD" onclick = "updateScore('WD');">WD</button>
-                <button id="btnNB" onclick = "updateScore('NB');">NB</button>
-            </div>
-            <div>
-                <button id="rstScr" onclick = "resetScore()">Reset Score</button>
-                <button id="undoScr" onclick= "undoScore(score.lastResult)">Undo</button>
-            </div>
-        </div>    
-
-        <div>
-            <h4>Current Players</h4>
-
-            <div>
-                <label for="strike" class="block text-sm font-medium text-gray-700">Strike</label>
-                <input type="text" id="onstrike" name="onstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
-            </div>
-
-            <div>
-                <label for="nonstrike" class="block text-sm font-medium text-gray-700">Non Strike</label>
-                <input type="text" id="nonstrike" name="nonstrike" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Batsman">
-            </div>
-
-            <div>
-                <label for="currentbowler" class="block text-sm font-medium text-gray-700">Current Bowler</label>
-                <input type="text" id="currentbowler" name="currentbowler" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Enter Bowler">
-            </div>
-
-            <div>
-                <button id="btnUpdateplayers">Update Players</button> 
-            </div>
+            
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-<script src="script.js"></script>
 </body>
 </html>
