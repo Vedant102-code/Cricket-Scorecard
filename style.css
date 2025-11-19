@@ -147,7 +147,6 @@ h2{
     background-size: 200% auto;          
     box-shadow: 0 0 10px rgba(0.2, 0.2, 0.2, 0.2);
     border-radius: 50px;
-    display: block;
 }
 
 .btn-grad:hover {
@@ -175,7 +174,9 @@ h2{
 .placeholder-input::placeholder{
     color: #13221c50;
 }
-         
+    
+
+/* page 3 css*/
 .batting-team-disp{
     display: flex;
     justify-content: space-evenly;
@@ -200,3 +201,71 @@ select{
     border-radius: 20px;
 }
 
+
+.main-score-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-score-disp{
+    background: rgb(121, 185, 140);
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 30px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.active-players{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 200px;
+}
+
+.active-batsmen{
+    background: rgb(121, 185, 140);
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 100px;
+}
+
+.active-bowler{
+    background: rgb(121, 185, 140);
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0.4, 0.4, 0.4, 0.4);
+    border-radius: 100px;
+}
+
+.btn-grad-p3 {background-image: linear-gradient(to right, #7fbe69 0%, #75e74c  51%, #7fbe69  100%)}
+.btn-grad-p3 {
+    color: #212424;
+    font-weight: 1000;
+    border: none;
+    margin: 7px;
+    padding: 15px 35px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;          
+    box-shadow: 0 0 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 50px;
+}
+
+.btn-grad-p3:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #212424;
+    text-decoration: none;
+}
+
+.btn-grad-p3:active{
+    opacity: 0.75;
+    transition: 0.1s;
+    box-shadow: none;
+}
