@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Scorecard</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,18 +23,18 @@
                 <div class="team-name">
                     <div class="team">
                         <h3>Team 1 Name</h3>
-                        <input type="text" placeholder="Name" class="info-input-box">
+                        <input type="text" placeholder="Name" class="info-input-box" id="team1-name">
                     </div>
                     <div class="team">
                         <h3 class="team1">Team 2 Name</h3>
-                        <input type="text" placeholder="Name" class="info-input-box">
+                        <input type="text" placeholder="Name" class="info-input-box" id="team2-name">
                     </div>
                 </div>
                 
                 <div class="over-box">
                     <div class="over-elements">
                         <h3>Number of Overs</h3>
-                        <p><input type="number" name="overs" class="over-input-box" placeholder="Overs"></p>
+                        <p><input type="number" name="overs" class="over-input-box" placeholder="Overs" id="num-overs"></p>
                     </div>
                 </div>
                 
@@ -41,7 +42,7 @@
         
             <div class="nextbutton-box">
                 <div >
-                    <button type="submit"class="btn-grad">Next</button>
+                    <button type="submit"class="btn-grad" id="next-button-page1">Next</button>
                 </div>
             </div>
 
