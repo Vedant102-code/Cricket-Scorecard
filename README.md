@@ -2,116 +2,131 @@
 
 CricScore is a fully functional, browser-based cricket scoring prototype designed to track matches ball-by-ball. It provides a seamless interface for managing teams, tracking live scores, calculating run rates, and generating detailed innings summaries without the need for a backend server.
 
-🚀 Features
+🚀 Live Demo
 
-Match Setup: Configure team names and match duration (number of overs).
+The application is deployed and ready to use. Click the link below to start scoring:
 
-Squad Management: Input names for playing 11s and select the batting team.
+👉 crickscoremmcoe.netlify.app
 
-Live Scoring Interface:
+✨ Features
 
-Ball-by-ball run tracking (0-7 runs).
+📋 Match Setup & Management
 
-Extras handling (Wides, No Balls).
+Custom Configuration: Set custom team names and match duration (number of overs).
 
-Wicket management with new batsman prompts.
+Squad Entry: Input names for playing 11s and determine the toss winner/batting team.
 
-Strike Rotation: Automatic strike rotation on odd runs and over completion.
+🏏 Live Scoring Interface
 
-Real-time Statistics:
+Ball-by-Ball Tracking: Buttons for 0-7 runs, Wickets, and Extras (Wide, No Ball).
 
-Current Score & Overs.
+Smart Logic:
 
-CRR (Current Run Rate) calculation.
+Automatic Strike Rotation on odd runs and over completion.
 
-RRR (Required Run Rate) calculation during the 2nd innings chase.
+Wicket Handling: Prompts to select the next incoming batsman.
 
-Projected Score estimation.
+Bowler Rotation: Prompts to change bowlers after an over ends.
 
-Undo Functionality: Mistake correction logic to revert the last ball's data.
+Undo Capability: "Undo" button to revert the last ball in case of scoring errors.
 
-State Persistence: Uses localStorage to save match progress, allowing page reloads without data loss.
+📊 Real-Time Statistics
 
-Comprehensive Summaries:
+Dynamic Scoreboard: Updates runs, wickets, and overs instantly.
 
-Innings Summary: Detailed batting and bowling scorecards after the 1st innings.
+Run Rates:
 
-Match Summary: Side-by-side comparison of both innings with a final result banner (e.g., "Team A won by 4 wickets").
+CRR (Current Run Rate) displayed throughout the match.
+
+RRR (Required Run Rate) calculated automatically during the 2nd innings chase.
+
+Projected Score: Estimates the final total based on the current run rate (1st Innings).
+
+🏆 Comprehensive Summaries
+
+Innings Summary: Detailed batting and bowling scorecards generated after the 1st innings.
+
+Match Summary: A final report comparing both innings side-by-side with a clear Winner Banner (e.g., "Team A won by 4 wickets").
+
+💾 Data Persistence
+
+Uses Local Storage to save match progress. You can refresh the page or close the browser without losing the current score.
 
 🛠️ Tech Stack
 
-HTML5: Semantic structure for application pages.
+Technology
 
-CSS3: Custom styling with responsive design, flexbox layouts, and gradient aesthetics.
+Usage
 
-JavaScript (ES6+): Core logic for scoring, DOM manipulation, and local storage management.
+HTML5
+
+Semantic structure and layout of the application.
+
+CSS3
+
+Custom styling, gradients, flexbox layouts, and responsive design.
+
+JavaScript (ES6+)
+
+Core game logic, DOM manipulation, state management, and calculations.
 
 📂 Project Structure
 
-├── index.html            # Match Setup (Team names & Overs)
-├── page2.html            # Player Entry & Toss
-├── score.html            # 1st Innings Scoreboard
+/
+├── index.html            # Landing page (Match Setup: Team names & Overs)
+├── page2.html            # Squad Entry (Player names & Toss)
+├── score.html            # 1st Innings Scoreboard Interface
 ├── score2.html           # 2nd Innings Scoreboard (Chase Logic)
-├── innings_summary.html  # Mid-match summary
+├── innings_summary.html  # Mid-match summary report
 ├── match_summary.html    # Final match result & combined scorecards
-├── style.css             # Global styling sheet
-└── script.js             # Application logic & state management
+├── style.css             # Global stylesheet for all pages
+└── script.js             # Main application logic & state handling
 
 
 📸 Screenshots
 
-<!-- Upload your screenshots to your repo and link them here -->
+<!-- Upload screenshots to your repo's 'assets' folder and update the links below -->
 
-Match Setup
+<div align="center">
+<img src="path/to/setup-screenshot.png" alt="Match Setup" width="300" />
+<img src="path/to/scoreboard-screenshot.png" alt="Live Scoreboard" width="300" />
+<img src="path/to/summary-screenshot.png" alt="Match Summary" width="300" />
+</div>
 
-Live Scoreboard
-
-Match Summary
-
-
-
-
-
-
-
-🏁 How to Run / Live Demo
-
-The website is fully deployed and ready to use. You can access the live version here:
-
-👉 crickscoremmcoe.netlify.app
-
-🧩 Logic Overview
+⚡ Logic Overview
 
 State Management
 
-The application uses the browser's localStorage to maintain the "Match State". This includes:
+The app relies heavily on localStorage to maintain the "Match State" across different pages. Key data structures include:
 
-teamScore: Runs, wickets, balls, overs.
+teamScore: Tracks total runs, wickets, balls bowled, and completed overs.
 
-matchStats: Individual player stats (runs scored, balls faced, wickets taken, economy).
+matchStats: Objects storing individual player stats (runs, balls faced, wickets, economy).
 
-matchState: Current Striker, Non-Striker, and Bowler.
+matchState: Tracks the current Striker, Non-Striker, and Bowler to handle rotation logic.
 
-Chase Logic
+Chase Calculation (2nd Innings)
 
-In the second innings (score2.html), the app automatically calculates the target based on the first innings score. It introduces the Required Run Rate (RRR) logic to assist the chasing team in tracking their progress against the target.
+When the 1st innings ends, the data is archived. The score2.html page initializes with the target score. The logic adapts to display Target instead of Projected Score and calculates the Runs Needed and Balls Remaining for the RRR display.
 
 🤝 Contributing
 
-Contributions are welcome! If you have ideas for improvements (e.g., wagon wheels, ball-by-ball commentary logs), feel free to fork the repo and submit a pull request.
+Contributions are welcome! If you have ideas for improvements (e.g., wagon wheels, commentary logs), feel free to fork the repo.
 
-Fork the Project
+Fork the project.
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Create your Feature Branch (git checkout -b feature/AmazingFeature).
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+Commit your changes (git commit -m 'Add some AmazingFeature').
 
-Push to the Branch (git push origin feature/AmazingFeature)
+Push to the branch (git push origin feature/AmazingFeature).
 
-Open a Pull Request
+Open a Pull Request.
 
 📄 License
 
-Distributed under the MIT License. See LICENSE for more information.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Created with ❤️ for Cricket Fans.
+<p align="center">
+Created with ❤️ for Cricket Fans
+</p>
